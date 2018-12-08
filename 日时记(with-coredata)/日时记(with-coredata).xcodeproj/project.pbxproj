@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C4E850521B163C8002D5A1D /* ViewController_riji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4E850421B163C8002D5A1D /* ViewController_riji.swift */; };
+		9C4E850721B20B24002D5A1D /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4E850621B20B24002D5A1D /* CoreDataManager.swift */; };
 		9C6B8D7D21959B6D005A6DE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6B8D7C21959B6D005A6DE6 /* AppDelegate.swift */; };
 		9C6B8D7F21959B6D005A6DE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6B8D7E21959B6D005A6DE6 /* ViewController.swift */; };
 		9C6B8D8221959B6D005A6DE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C6B8D8021959B6D005A6DE6 /* Main.storyboard */; };
@@ -15,12 +17,8 @@
 		9C6B8D8A21959B70005A6DE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C6B8D8821959B70005A6DE6 /* LaunchScreen.storyboard */; };
 		9C6B8D9521959B70005A6DE6 /* ____with_coredata_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6B8D9421959B70005A6DE6 /* ____with_coredata_Tests.swift */; };
 		9C6B8DA021959B70005A6DE6 /* ____with_coredata_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6B8D9F21959B70005A6DE6 /* ____with_coredata_UITests.swift */; };
-		9C6B8DAE21959BE2005A6DE6 /* CoreDataDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6B8DAD21959BE1005A6DE6 /* CoreDataDAO.swift */; };
-		9C6B8DB72196BD1A005A6DE6 /* ViewController(notes).swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6B8DB62196BD1A005A6DE6 /* ViewController(notes).swift */; };
-		9C6B8DBB2196CCCE005A6DE6 /* coredatamanager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6B8DBA2196CCCE005A6DE6 /* coredatamanager.swift */; };
 		9C8BA480219EEE4700922231 /* Texts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9C8BA47E219EEE4700922231 /* Texts.xcdatamodeld */; };
-		9C8BA483219EEE7800922231 /* Texts+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8BA481219EEE7800922231 /* Texts+CoreDataClass.swift */; };
-		9C8BA484219EEE7800922231 /* Texts+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8BA482219EEE7800922231 /* Texts+CoreDataProperties.swift */; };
+		9C8D773421B145AD00022EB0 /* ViewController(notes).swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D772F21B143CB00022EB0 /* ViewController(notes).swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9C4E850421B163C8002D5A1D /* ViewController_riji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_riji.swift; sourceTree = "<group>"; };
+		9C4E850621B20B24002D5A1D /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataManager.swift; path = "../../../../Downloads/CoreDataSwiftDemo-master/CoreDataSwiftDemo/CoreDataSwiftDemo/CoreData/CoreDataManager.swift"; sourceTree = "<group>"; };
 		9C6B8D7921959B6D005A6DE6 /* 日时记(with-coredata).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "日时记(with-coredata).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C6B8D7C21959B6D005A6DE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C6B8D7E21959B6D005A6DE6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,11 +56,8 @@
 		9C6B8D9F21959B70005A6DE6 /* ____with_coredata_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "____with_coredata_UITests.swift"; sourceTree = "<group>"; };
 		9C6B8DA121959B70005A6DE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C6B8DAD21959BE1005A6DE6 /* CoreDataDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataDAO.swift; sourceTree = "<group>"; };
-		9C6B8DB62196BD1A005A6DE6 /* ViewController(notes).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController(notes).swift"; sourceTree = "<group>"; };
-		9C6B8DBA2196CCCE005A6DE6 /* coredatamanager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coredatamanager.swift; sourceTree = "<group>"; };
 		9C8BA47F219EEE4700922231 /* Texts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Texts.xcdatamodel; sourceTree = "<group>"; };
-		9C8BA481219EEE7800922231 /* Texts+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Texts+CoreDataClass.swift"; sourceTree = "<group>"; };
-		9C8BA482219EEE7800922231 /* Texts+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Texts+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9C8D772F21B143CB00022EB0 /* ViewController(notes).swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController(notes).swift"; sourceTree = "<group>"; wrapsLines = 1; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,11 +85,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C4E850821B20B2C002D5A1D /* coredata */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = coredata;
+			sourceTree = "<group>";
+		};
 		9C6B8D7021959B6D005A6DE6 = {
 			isa = PBXGroup;
 			children = (
-				9C8BA481219EEE7800922231 /* Texts+CoreDataClass.swift */,
-				9C8BA482219EEE7800922231 /* Texts+CoreDataProperties.swift */,
 				9C6B8D7B21959B6D005A6DE6 /* 日时记(with-coredata) */,
 				9C6B8D9321959B70005A6DE6 /* 日时记(with-coredata)Tests */,
 				9C6B8D9E21959B70005A6DE6 /* 日时记(with-coredata)UITests */,
@@ -113,11 +115,13 @@
 		9C6B8D7B21959B6D005A6DE6 /* 日时记(with-coredata) */ = {
 			isa = PBXGroup;
 			children = (
-				9C6B8DB62196BD1A005A6DE6 /* ViewController(notes).swift */,
+				9C4E850621B20B24002D5A1D /* CoreDataManager.swift */,
+				9C4E850821B20B2C002D5A1D /* coredata */,
 				9C6B8D7C21959B6D005A6DE6 /* AppDelegate.swift */,
 				9C6B8D7E21959B6D005A6DE6 /* ViewController.swift */,
-				9C6B8DBA2196CCCE005A6DE6 /* coredatamanager.swift */,
+				9C4E850421B163C8002D5A1D /* ViewController_riji.swift */,
 				9C6B8D8021959B6D005A6DE6 /* Main.storyboard */,
+				9C8D772F21B143CB00022EB0 /* ViewController(notes).swift */,
 				9C6B8D8621959B70005A6DE6 /* Assets.xcassets */,
 				9C8BA47E219EEE4700922231 /* Texts.xcdatamodeld */,
 				9C6B8DAD21959BE1005A6DE6 /* CoreDataDAO.swift */,
@@ -277,14 +281,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C8BA484219EEE7800922231 /* Texts+CoreDataProperties.swift in Sources */,
-				9C8BA483219EEE7800922231 /* Texts+CoreDataClass.swift in Sources */,
+				9C4E850521B163C8002D5A1D /* ViewController_riji.swift in Sources */,
 				9C6B8D8521959B6D005A6DE6 /* ____with_coredata_.xcdatamodeld in Sources */,
-				9C6B8DBB2196CCCE005A6DE6 /* coredatamanager.swift in Sources */,
 				9C6B8D7F21959B6D005A6DE6 /* ViewController.swift in Sources */,
 				9C6B8D7D21959B6D005A6DE6 /* AppDelegate.swift in Sources */,
-				9C6B8DAE21959BE2005A6DE6 /* CoreDataDAO.swift in Sources */,
-				9C6B8DB72196BD1A005A6DE6 /* ViewController(notes).swift in Sources */,
+				9C8D773421B145AD00022EB0 /* ViewController(notes).swift in Sources */,
+				9C4E850721B20B24002D5A1D /* CoreDataManager.swift in Sources */,
 				9C8BA480219EEE4700922231 /* Texts.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

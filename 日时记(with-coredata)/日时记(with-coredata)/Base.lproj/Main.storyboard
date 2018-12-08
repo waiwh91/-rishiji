@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -80,7 +80,7 @@
         <!--日记-->
         <scene sceneID="Syk-Pp-BHz">
             <objects>
-                <viewController id="sNd-f1-9J3" sceneMemberID="viewController">
+                <viewController id="sNd-f1-9J3" customClass="ViewController_riji" customModule="日时记_with_coredata_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="81h-wx-tkN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,6 +107,14 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHx-rn-WP2">
+                                <rect key="frame" x="143" y="110" width="135" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="getTexts:" destination="sNd-f1-9J3" eventType="touchUpInside" id="BN8-a6-rcY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="tjI-qg-96Q"/>
@@ -172,38 +180,40 @@
                                     <navigationItem title="日记" id="2Uh-po-G1G">
                                         <barButtonItem key="leftBarButtonItem" title="返回" image="返回" id="46d-if-zy4">
                                             <connections>
-                                                <action selector="back:" destination="7QN-dq-Wbb" id="ZUN-m2-lRf"/>
                                                 <segue destination="PE7-Ll-L5F" kind="show" id="RmF-xr-OKc"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" style="plain" id="E8C-cy-BaQ">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8mJ-eQ-kUk">
-                                                <rect key="frame" x="276" y="4" width="83" height="36"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <state key="normal" title="保存"/>
-                                            </button>
-                                            <connections>
-                                                <action selector="save:" destination="7QN-dq-Wbb" id="D9h-5c-6NG"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="drS-Bk-YnQ">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="保存">
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="save:" destination="7QN-dq-Wbb" eventType="touchUpInside" id="TRw-qB-1IO"/>
+                                </connections>
+                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DmR-eS-BZE">
-                                <rect key="frame" x="16" y="80" width="343" height="567"/>
+                                <rect key="frame" x="16" y="107" width="343" height="502"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <connections>
-                                    <outlet property="delegate" destination="7QN-dq-Wbb" id="Xv4-PI-GSN"/>
+                                    <outlet property="delegate" destination="7QN-dq-Wbb" id="gEk-uo-WQ6"/>
                                 </connections>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="qFl-d5-eUJ"/>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="textview" destination="DmR-eS-BZE" id="5HG-AZ-sJF"/>
                     </connections>
@@ -246,6 +256,7 @@
         <image name="返回" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="MIc-DN-3i6"/>
         <segue reference="RmF-xr-OKc"/>
     </inferredMetricsTieBreakers>
 </document>

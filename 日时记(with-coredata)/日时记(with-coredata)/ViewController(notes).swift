@@ -17,7 +17,7 @@ class ViewController_notes_: UIViewController,UITextFieldDelegate,UITextViewDele
 
     
     
-    
+    /*
     
     ///当前上下文
     public  lazy var mangerContext: NSManagedObjectContext = {
@@ -53,7 +53,7 @@ class ViewController_notes_: UIViewController,UITextFieldDelegate,UITextViewDele
         return model
         }()
  
-
+*/
     
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
@@ -77,33 +77,37 @@ class ViewController_notes_: UIViewController,UITextFieldDelegate,UITextViewDele
     }
 
    
-    
-    
-    
     @IBAction func save(_ sender: Any) {
-        let texts : String
-        texts = textview.text
-        print(texts)
-        let date = NSDate()
+        print("点击保存")
+       guard let textString = textview.text else { return }
+        print(textString)
+        let date = Date()
         let timeFormatter = DateFormatter()
-        timeFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss.SSS"
-        let strNowTime = timeFormatter.string(from: date as Date) as String
-        
+        //日期显示格式，可按自己需求显示
+        timeFormatter.dateFormat = "yyy-MM-dd' at 'HH:mm:ss.SSS"
+        let strNowTime = timeFormatter.string(from: date) as String
+        print(strNowTime)
         print(date)
         
         
-        let text = NSEntityDescription.insertNewObject(forEntityName: "Texts", into: mangerContext) as! Texts
-        text.text = texts
-        text.date = date
-        do {
-            try  self.mangerContext.save()
-        }catch{
-            fatalError("保存失败")
-        }
+        
+        CoreDataManager.shared.saveTextWith(text: textString,date:date)
+    }
         
     }
+        
+
     
-   
+    
+        
+    
+    
+    
+    
+
+    
+    
+    
     
             
         /*let text :Texts = NSEntityDescription.insertNewObject(forEntityName: "Texts", into: self.mangerContext) as! Texts
@@ -112,7 +116,7 @@ class ViewController_notes_: UIViewController,UITextFieldDelegate,UITextViewDele
         
         
         
-    }
+
     
     
     
