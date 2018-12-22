@@ -8,7 +8,7 @@ class CoreDataManager: NSObject {
     
     // 拿到AppDelegate中创建好了的NSManagedObjectContext
     lazy var context: NSManagedObjectContext = {
-        let context = ((UIApplication.shared.delegate) as! AppDelegate).context
+        let context = ((UIApplication.shared.delegate) as! AppDelegate).savecontext
         return context
     }()
     
@@ -23,12 +23,19 @@ class CoreDataManager: NSObject {
     }
     
     // 增加数据
-    func saveTextWith(text: String,date:Date) {
+    
+    public 
+    
+    
+    
+    
+   /* func saveTextWith(text: String,date:Date) {
         let texts = NSEntityDescription.insertNewObject(forEntityName: "Texts", into: context) as! Texts
         texts.text = text
         texts.date = date
         saveContext()
     }
+ */
     
     // 根据姓名获取数据
     func getTextWith(date: Date) -> [Texts] {

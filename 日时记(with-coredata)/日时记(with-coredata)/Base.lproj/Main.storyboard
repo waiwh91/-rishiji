@@ -101,25 +101,51 @@
                                         <barButtonItem key="leftBarButtonItem" title="历史" image="时间" id="xNF-pK-ft3"/>
                                         <barButtonItem key="rightBarButtonItem" title="新建" image="新建" id="aEW-Q4-JMl">
                                             <connections>
-                                                <segue destination="7QN-dq-Wbb" kind="modal" id="MIc-DN-3i6"/>
+                                                <segue destination="7QN-dq-Wbb" kind="showDetail" id="23k-Du-ogt"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHx-rn-WP2">
-                                <rect key="frame" x="143" y="110" width="135" height="71"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8sy-Ir-It3">
+                                <rect key="frame" x="1" y="71" width="362" height="547"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="getTexts:" destination="sNd-f1-9J3" eventType="touchUpInside" id="BN8-a6-rcY"/>
-                                </connections>
-                            </button>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="63" id="lyb-vx-DoO">
+                                        <rect key="frame" x="0.0" y="28" width="362" height="63"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lyb-vx-DoO" id="paP-Ge-jgr">
+                                            <rect key="frame" x="0.0" y="0.0" width="362" height="62.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EvY-PQ-eoi">
+                                                    <rect key="frame" x="15" y="0.0" width="332" height="35"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="subLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tf5-S2-j5W">
+                                                    <rect key="frame" x="15" y="31" width="312" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="tjI-qg-96Q"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="日记" image="2日记" id="oOI-tz-ddd"/>
+                    <connections>
+                        <outlet property="tbv" destination="8sy-Ir-It3" id="lkk-Vy-OCO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LRQ-yP-rLY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -180,24 +206,26 @@
                                     <navigationItem title="日记" id="2Uh-po-G1G">
                                         <barButtonItem key="leftBarButtonItem" title="返回" image="返回" id="46d-if-zy4">
                                             <connections>
-                                                <segue destination="PE7-Ll-L5F" kind="show" id="RmF-xr-OKc"/>
+                                                <action selector="cancel:" destination="7QN-dq-Wbb" id="s7j-R0-1Ez"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="save" springLoaded="YES" style="plain" id="OaM-gF-cZm">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Kzj-LU-6k2">
+                                                <rect key="frame" x="276" y="3" width="83" height="38"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="保存"/>
+                                                <connections>
+                                                    <action selector="savetext:" destination="7QN-dq-Wbb" eventType="touchUpInside" id="DWT-66-ijD"/>
+                                                </connections>
+                                            </button>
+                                            <connections>
+                                                <action selector="save:" destination="7QN-dq-Wbb" id="9XU-5s-ZJx"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="drS-Bk-YnQ">
-                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="保存">
-                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="save:" destination="7QN-dq-Wbb" eventType="touchUpInside" id="TRw-qB-1IO"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DmR-eS-BZE">
                                 <rect key="frame" x="16" y="107" width="343" height="502"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -226,6 +254,7 @@
         <scene sceneID="jIJ-OS-uYw">
             <objects>
                 <tabBarController id="PE7-Ll-L5F" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="I9W-By-2Tu"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0ar-gy-VLh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -255,8 +284,4 @@
         <image name="调整" width="30" height="30"/>
         <image name="返回" width="30" height="30"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="MIc-DN-3i6"/>
-        <segue reference="RmF-xr-OKc"/>
-    </inferredMetricsTieBreakers>
 </document>
