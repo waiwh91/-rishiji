@@ -55,7 +55,7 @@ public class NoteDAO : CoreDataDAO{
         do {
             let listData = try context.fetch(fetchRequest)
             if listData.count > 0 {
-                let note = listData[0] as! NSManagedObject
+                let note = listData[0] as! Texts
                 context.delete(note)
                 //保存数据
                 self.saveContext()
@@ -105,10 +105,10 @@ public class NoteDAO : CoreDataDAO{
             let fetchRequest = NSFetchRequest<NSFetchRequestResult>()
             fetchRequest.entity = entity
             
-            let sortDescriptor = NSSortDescriptor(key:"date", ascending:true)
+            /*let sortDescriptor = NSSortDescriptor(key:"date", ascending:true)
             let sortDescriptors = [sortDescriptor]
             fetchRequest.sortDescriptors = sortDescriptors
-            
+            */
             let resListData = NSMutableArray()
             
             do {

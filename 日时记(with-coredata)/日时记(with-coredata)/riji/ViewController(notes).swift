@@ -38,8 +38,10 @@ class ViewController_notes_: UIViewController,UITextFieldDelegate,UITextViewDele
         note.date = NSDate()
         let dao = NoteDAO.sharedInstance
         dao.create(note)
-        self.dismiss(animated: true, completion: nil)
         
+        self.textview.resignFirstResponder()
+       
+        self.dismiss(animated: true, completion: nil)
         
     }
     
