@@ -24,7 +24,7 @@ class ViewController_mood: UIViewController, UIPickerViewDataSource, UIPickerVie
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        moodlabel.text = "今天也是开心的一天呢！"
+        moodlabel.text = ""
         
     }
     
@@ -32,7 +32,7 @@ class ViewController_mood: UIViewController, UIPickerViewDataSource, UIPickerVie
     @IBAction func save(_ sender: Any) {
         
         if rijitext.mood == "" || rijitext.mood == "选择一个心情～" {
-            let alert = UIAlertController(title: "确定？", message: "你真的不想选择一个心情嘛", preferredStyle: .alert)
+            let alert = UIAlertController(title: "确定？", message: "你真的真的不想选择一个心情？？", preferredStyle: .alert)
             let noaction = UIAlertAction(title: "再想想", style: .cancel, handler: nil)
             let yesaction = UIAlertAction(title: "确定", style: .default, handler: {
                 action in
@@ -83,6 +83,8 @@ class ViewController_mood: UIViewController, UIPickerViewDataSource, UIPickerVie
         let mood = self.moodarry[row]
         
         switch mood {
+        case "选择一个心情～" :
+            moodlabel.text = "你真的不想选择一个心情？"
         case "😊":
             moodlabel.text = "今天也是开心的一天呢！"
         case "😭":

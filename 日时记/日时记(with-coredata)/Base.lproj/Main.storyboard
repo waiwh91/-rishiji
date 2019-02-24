@@ -120,6 +120,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="日记" id="aQu-23-DtW">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="SPv-zn-RtY">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JBi-CO-bJO">
+                                <rect key="frame" x="16" y="7" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="时间"/>
+                                <connections>
+                                    <segue destination="97z-o0-Hji" kind="show" id="v6y-mM-0Cq"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Eih-Fh-Paw">
                             <connections>
                                 <segue destination="JwJ-qI-Qtk" kind="showDetail" id="D3g-8l-MLw"/>
@@ -401,6 +411,35 @@
             </objects>
             <point key="canvasLocation" x="1353" y="-703"/>
         </scene>
+        <!--Data Source-->
+        <scene sceneID="Dez-Vi-Cq3">
+            <objects>
+                <viewController id="97z-o0-Hji" customClass="ViewControlle_history" customModule="日时记_with_coredata_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tws-xZ-5Y6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lbt-1Y-ZrK" customClass="FSCalendar">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="97z-o0-Hji" id="Fd4-UF-a2j"/>
+                                    <outlet property="delegate" destination="97z-o0-Hji" id="Kl9-De-BuV"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="9G6-ln-xaJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="Calender" destination="Lbt-1Y-ZrK" id="H7d-nc-X5A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PTU-Xq-GwH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2128.8000000000002" y="-268.51574212893553"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="jIJ-OS-uYw">
             <objects>
@@ -449,6 +488,7 @@
         <image name="新建" width="30" height="30"/>
         <image name="日历" width="30" height="30"/>
         <image name="日历bg" width="411" height="734"/>
+        <image name="时间" width="30" height="30"/>
         <image name="调整" width="30" height="30"/>
     </resources>
 </document>

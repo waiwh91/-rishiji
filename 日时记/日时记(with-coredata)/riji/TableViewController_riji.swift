@@ -64,7 +64,7 @@ class TableViewController_riji: UITableViewController {
         cell.backgroundColor = UIColor.clear
         let row = (indexPath as IndexPath).row
         let note = listData[row] as! riji
-        // print(note)
+        
         
         let dateformatter = DateFormatter()
         dateformatter.dateFormat = "yyyy/MM/dd"

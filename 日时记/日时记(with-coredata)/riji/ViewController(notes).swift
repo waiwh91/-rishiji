@@ -43,6 +43,15 @@ class ViewController_notes_: UIViewController,UITextFieldDelegate,UITextViewDele
         let note = riji()
         note.text = self.textview.text
         note.date = NSDate()
+        if note.text == "" {
+            let alert = UIAlertController(title: "确定？", message: "一个字都不写真的好吗", preferredStyle: .alert)
+            let noaction = UIAlertAction(title: "写点什么", style: .cancel, handler: nil)
+            alert.addAction(noaction)
+            
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+       
         /*let dao = NoteDAO.sharedInstance
         dao.create(note)
         
