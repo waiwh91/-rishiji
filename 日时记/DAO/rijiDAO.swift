@@ -19,7 +19,7 @@ public class NoteDAO : CoreDataDAO{
             let instance = NoteDAO()
             
             //初始化DateFormatter
-            instance.dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+            instance.dateFormatter.dateFormat = "yyyy-MM-dd"
             
             return instance
         }()
@@ -31,7 +31,7 @@ public class NoteDAO : CoreDataDAO{
             
             let note = NSEntityDescription.insertNewObject(forEntityName: "Texts", into:context) as! Texts
             
-           
+            
             note.date = model.date as Date
             note.text = model.text
             note.mood = model.mood
@@ -52,7 +52,7 @@ public class NoteDAO : CoreDataDAO{
         
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>()
         fetchRequest.entity = entity
-        fetchRequest.predicate = NSPredicate(format: "date = %@", model.date)
+        fetchRequest.predicate = NSPredicate(format: "date = %@", model.date as CVarArg)
         
         do {
             let listData = try context.fetch(fetchRequest)
@@ -79,7 +79,7 @@ public class NoteDAO : CoreDataDAO{
         
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>()
         fetchRequest.entity = entity
-        fetchRequest.predicate = NSPredicate(format: "date = %@", model.date)
+        fetchRequest.predicate = NSPredicate(format: "date = %@", model.date as CVarArg)
         
         do {
             let listData = try context.fetch(fetchRequest)
@@ -120,7 +120,7 @@ public class NoteDAO : CoreDataDAO{
                     
                     for item in listData {
                         let mo = item as! Texts
-                        let note = riji(date: mo.date! as NSDate, text: mo.text!, mood: mo.mood!)
+                        let note = riji(date: mo.date! , text: mo.text!, mood: mo.mood!)
                         resListData.add(note)
                     }
                 }
@@ -130,5 +130,32 @@ public class NoteDAO : CoreDataDAO{
             
             return resListData
         }
+    
+    //有条件查找
+    public func IDfind(_ model: riji) -> riji?{
+        let context = persistentContainer.viewContext
+        
+        let entity = NSEntityDescription.entity(forEntityName: "Texts", in: context)
+        
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>()
+        fetchRequest.entity = entity
+        fetchRequest.predicate = NSPredicate(format: "date = %@", model.date as CVarArg)
+        
+       // print(fetchRequest)
+        
+        do{
+            let listData = try context.fetch(fetchRequest)
+            if listData.count > 0{
+                let mo = listData[0] as! Texts
+                let note = riji(date: mo.date! , text: mo.text!, mood:mo.mood!)
+                return note
+            }
+            
+            
+        }catch{
+            NSLog("查询失败")
+        }
+        return nil
+    }
 
 }

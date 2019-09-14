@@ -11,18 +11,18 @@ import Foundation
 
 public class riji: NSObject,NSCoding {
     
-    public var date: NSDate
+    public var date: Date
     public var text: String
     public var mood :String
 
-    public init(date: NSDate, text: String, mood: String) {
+    public init(date: Date, text: String, mood: String) {
         self.date = date
         self.text = text
         self.mood = mood
     }
     
     override public init() {
-        self.date = NSDate()
+        self.date = Date()
         self.text = ""
         self.mood = ""
     }
@@ -34,7 +34,7 @@ public class riji: NSObject,NSCoding {
         aCoder.encode(mood, forKey: "mood")    }
     
     public required init(coder aDecoder: NSCoder) {
-        self.date = aDecoder.decodeObject(forKey: "date") as! NSDate
+        self.date = aDecoder.decodeObject(forKey: "date") as! Date
         self.text = aDecoder.decodeObject(forKey: "text") as! String
         self.mood = aDecoder.decodeObject(forKey: "mood") as! String    }
     

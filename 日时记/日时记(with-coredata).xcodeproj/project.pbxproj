@@ -21,6 +21,12 @@
 		9C836B3A21CD029D00208D03 /* riji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C836B3921CD029D00208D03 /* riji.swift */; };
 		9C8BA480219EEE4700922231 /* Texts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9C8BA47E219EEE4700922231 /* Texts.xcdatamodeld */; };
 		9C8D773421B145AD00022EB0 /* ViewController(notes).swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D772F21B143CB00022EB0 /* ViewController(notes).swift */; };
+		9CA8E88D2324A29400C3EFD8 /* ViewController_mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA8E88C2324A29400C3EFD8 /* ViewController_mood.swift */; };
+		9CA8E88E2324A29400C3EFD8 /* ViewController_mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA8E88C2324A29400C3EFD8 /* ViewController_mood.swift */; };
+		9CA8E88F2324A29400C3EFD8 /* ViewController_mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA8E88C2324A29400C3EFD8 /* ViewController_mood.swift */; };
+		9CA8E8912324A68000C3EFD8 /* riji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA8E8902324A68000C3EFD8 /* riji.swift */; };
+		9CA8E8922324A68000C3EFD8 /* riji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA8E8902324A68000C3EFD8 /* riji.swift */; };
+		9CA8E8932324A68000C3EFD8 /* riji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA8E8902324A68000C3EFD8 /* riji.swift */; };
 		9CD1759321F413DB007FF33D /* TableViewController_riji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD1759221F413DB007FF33D /* TableViewController_riji.swift */; };
 		9CECF8CE21FAE6190079EDAF /* ViewController_mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CECF8CD21FAE6190079EDAF /* ViewController_mood.swift */; };
 		9CF002A42201C95100CBACC3 /* ViewControlle_history.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF002A32201C95100CBACC3 /* ViewControlle_history.swift */; };
@@ -113,7 +119,7 @@
 		9C6B8D8B21959B70005A6DE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C6B8D9021959B70005A6DE6 /* 日时记(with-coredata)Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "日时记(with-coredata)Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C6B8D9421959B70005A6DE6 /* ____with_coredata_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "____with_coredata_Tests.swift"; sourceTree = "<group>"; };
-		9C6B8D9621959B70005A6DE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C6B8D9621959B70005A6DE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		9C6B8D9B21959B70005A6DE6 /* 日时记(with-coredata)UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "日时记(with-coredata)UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C6B8D9F21959B70005A6DE6 /* ____with_coredata_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "____with_coredata_UITests.swift"; sourceTree = "<group>"; };
 		9C6B8DA121959B70005A6DE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -122,6 +128,8 @@
 		9C836B3921CD029D00208D03 /* riji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = riji.swift; sourceTree = "<group>"; };
 		9C8BA47F219EEE4700922231 /* Texts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Texts.xcdatamodel; sourceTree = "<group>"; };
 		9C8D772F21B143CB00022EB0 /* ViewController(notes).swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController(notes).swift"; sourceTree = "<group>"; wrapsLines = 1; };
+		9CA8E88C2324A29400C3EFD8 /* ViewController_mood.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController_mood.swift; path = mood/ViewController_mood.swift; sourceTree = "<group>"; };
+		9CA8E8902324A68000C3EFD8 /* riji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = riji.swift; sourceTree = "<group>"; };
 		9CD1759221F413DB007FF33D /* TableViewController_riji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController_riji.swift; sourceTree = "<group>"; };
 		9CECF8CD21FAE6190079EDAF /* ViewController_mood.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_mood.swift; sourceTree = "<group>"; };
 		9CF002A32201C95100CBACC3 /* ViewControlle_history.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControlle_history.swift; sourceTree = "<group>"; };
@@ -242,7 +250,6 @@
 			isa = PBXGroup;
 			children = (
 				9C6B8D9421959B70005A6DE6 /* ____with_coredata_Tests.swift */,
-				9C6B8D9621959B70005A6DE6 /* Info.plist */,
 			);
 			path = "日时记(with-coredata)Tests";
 			sourceTree = "<group>";
@@ -250,6 +257,7 @@
 		9C6B8D9E21959B70005A6DE6 /* 日时记(with-coredata)UITests */ = {
 			isa = PBXGroup;
 			children = (
+				9C6B8D9621959B70005A6DE6 /* Info.plist */,
 				9C6B8D9F21959B70005A6DE6 /* ____with_coredata_UITests.swift */,
 				9C6B8DA121959B70005A6DE6 /* Info.plist */,
 			);
@@ -271,6 +279,8 @@
 				9CECF8D121FAE6310079EDAF /* mood */,
 				9C7E511A21D8E17C0061D526 /* ViewController_riji_details.swift */,
 				9CD1759221F413DB007FF33D /* TableViewController_riji.swift */,
+				9CA8E88C2324A29400C3EFD8 /* ViewController_mood.swift */,
+				9CA8E8902324A68000C3EFD8 /* riji.swift */,
 				9CF002A32201C95100CBACC3 /* ViewControlle_history.swift */,
 				9C836B3921CD029D00208D03 /* riji.swift */,
 				9C8D772F21B143CB00022EB0 /* ViewController(notes).swift */,
@@ -477,6 +487,7 @@
 				9C6B8D8521959B6D005A6DE6 /* ____with_coredata_.xcdatamodeld in Sources */,
 				9CF0037B2201D5F300CBACC3 /* FSCalendarConstants.m in Sources */,
 				9C6B8D7F21959B6D005A6DE6 /* ViewController.swift in Sources */,
+				9CA8E88D2324A29400C3EFD8 /* ViewController_mood.swift in Sources */,
 				9CF0037E2201D5F300CBACC3 /* FSCalendarCollectionView.m in Sources */,
 				9C836B3A21CD029D00208D03 /* riji.swift in Sources */,
 				9CD1759321F413DB007FF33D /* TableViewController_riji.swift in Sources */,
@@ -492,6 +503,7 @@
 				9CF003812201D5F300CBACC3 /* FSCalendarDelegationProxy.m in Sources */,
 				9C7E511B21D8E17C0061D526 /* ViewController_riji_details.swift in Sources */,
 				9C24D4FD21CE3A2C00169290 /* CoreDataDAO.swift in Sources */,
+				9CA8E8912324A68000C3EFD8 /* riji.swift in Sources */,
 				9CF003692201D5F200CBACC3 /* FSCalendarExtensions.m in Sources */,
 				9C836B3621CCF90600208D03 /* rijiDAO.swift in Sources */,
 				9CF0036C2201D5F300CBACC3 /* FSCalendar.m in Sources */,
@@ -515,8 +527,10 @@
 				9CF003582201D5F200CBACC3 /* FSCalendarCalculator.m in Sources */,
 				9CF0035E2201D5F200CBACC3 /* FSCalendarWeekdayView.m in Sources */,
 				9CF0036A2201D5F200CBACC3 /* FSCalendarExtensions.m in Sources */,
+				9CA8E8922324A68000C3EFD8 /* riji.swift in Sources */,
 				9CF003822201D5F300CBACC3 /* FSCalendarDelegationProxy.m in Sources */,
 				9CF0037F2201D5F300CBACC3 /* FSCalendarCollectionView.m in Sources */,
+				9CA8E88E2324A29400C3EFD8 /* ViewController_mood.swift in Sources */,
 				9CF003792201D5F300CBACC3 /* FSCalendarTransitionCoordinator.m in Sources */,
 				9C6B8D9521959B70005A6DE6 /* ____with_coredata_Tests.swift in Sources */,
 				9CF003732201D5F300CBACC3 /* FSCalendarHeaderView.m in Sources */,
@@ -538,8 +552,10 @@
 				9CF003592201D5F200CBACC3 /* FSCalendarCalculator.m in Sources */,
 				9CF0035F2201D5F200CBACC3 /* FSCalendarWeekdayView.m in Sources */,
 				9CF0036B2201D5F200CBACC3 /* FSCalendarExtensions.m in Sources */,
+				9CA8E8932324A68000C3EFD8 /* riji.swift in Sources */,
 				9CF003832201D5F300CBACC3 /* FSCalendarDelegationProxy.m in Sources */,
 				9CF003802201D5F300CBACC3 /* FSCalendarCollectionView.m in Sources */,
+				9CA8E88F2324A29400C3EFD8 /* ViewController_mood.swift in Sources */,
 				9CF0037A2201D5F300CBACC3 /* FSCalendarTransitionCoordinator.m in Sources */,
 				9C6B8DA021959B70005A6DE6 /* ____with_coredata_UITests.swift in Sources */,
 				9CF003742201D5F300CBACC3 /* FSCalendarHeaderView.m in Sources */,

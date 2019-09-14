@@ -38,7 +38,7 @@ class ViewController_riji_details: UIViewController {
             if let textview = self.detailview {
                 textview.text = detail.text
                 let dateFormate = DateFormatter()
-                dateFormate.dateFormat = "yyyy/MM/dd"
+                dateFormate.dateFormat = "yyyy-MM-dd"
                 let date = dateFormate.string(from: detail.date as Date)
                 self.navigationItem.title = date
                 self.moodlabel.text = detail.mood

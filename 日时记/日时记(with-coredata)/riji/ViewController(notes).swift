@@ -42,7 +42,8 @@ class ViewController_notes_: UIViewController,UITextFieldDelegate,UITextViewDele
     @IBAction func save(_ sender: Any) {
         let note = riji()
         note.text = self.textview.text
-        note.date = NSDate()
+        note.date = Date()
+        //print(note.date)
         if note.text == "" {
             let alert = UIAlertController(title: "确定？", message: "一个字都不写真的好吗", preferredStyle: .alert)
             let noaction = UIAlertAction(title: "写点什么", style: .cancel, handler: nil)
@@ -72,7 +73,17 @@ class ViewController_notes_: UIViewController,UITextFieldDelegate,UITextViewDele
         if segue.identifier == "sendtext"{
             let note = riji()
             note.text = self.textview.text
-            note.date = NSDate()
+            let calendar = NSCalendar.current
+            let datecomponents = calendar.dateComponents(in: TimeZone.current, from: Date())
+            let newdate = NSDateComponents()
+            newdate.year = datecomponents.year!
+            newdate.month = datecomponents.month!
+            newdate.day = datecomponents.day!
+            
+            let newnewdate = calendar.date(from: newdate as DateComponents)
+            
+            note.date = newnewdate!
+            print(note.date)
             let controller = (segue.destination as! UINavigationController).topViewController as! ViewController_mood
             controller.rijitext.text = note.text
             controller.rijitext.date = note.date

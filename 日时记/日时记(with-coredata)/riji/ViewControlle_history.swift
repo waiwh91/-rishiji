@@ -14,11 +14,19 @@ class ViewControlle_history: UIViewController,FSCalendarDelegate,FSCalendarDataS
 
     @IBOutlet weak var Calender: FSCalendar!
     
-    var listData = NSMutableArray()
-    var mooddate = [Date]()
-    var number:Int = 0
-    fileprivate let gregorian: NSCalendar! = NSCalendar(calendarIdentifier:NSCalendar.Identifier.gregorian)
     
+    var ViewController_riji_details : ViewController_riji_details? = nil
+
+    
+    var listData = NSMutableArray()
+    var fetchDate = riji()
+    
+    fileprivate lazy var dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        return formatter
+    }()
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,24 +35,14 @@ class ViewControlle_history: UIViewController,FSCalendarDelegate,FSCalendarDataS
         let dao = NoteDAO.sharedInstance
         //查询所有数据
         self.listData = dao.findAll()
-        self.number = listData.count
         
-        for index in 0...number-1 {
-            let note = listData[index] as! riji
-            //print(note.date)
-            let dateformatter = DateFormatter()
-            dateformatter.dateFormat = "yyyy/MM/dd"
-            
-            
-            self.mooddate.append(note.date as Date)
-            
-            
-            
-        }
+        
+      //print(listData)
+        
         // Do any additional setup after loading the view.
     }
     
-    
+
     
     
     override func viewWillAppear(_ animated: Bool) {
@@ -55,14 +53,57 @@ class ViewControlle_history: UIViewController,FSCalendarDelegate,FSCalendarDataS
     
     
     
-    /*
-    // MARK: - Navigation
+    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        
+        let calendar = NSCalendar.current
+        let dateComponents = calendar.dateComponents(in: TimeZone.current, from:date)
+        let newdate = NSDateComponents()
+        newdate.year = dateComponents.year!
+        newdate.month = dateComponents.month!
+        newdate.day = dateComponents.day!
+        
+        let newnewdate = calendar.date(from: newdate as DateComponents)
+        let fetchnewdate:Date = newnewdate!
+        
+        fetchDate.date = fetchnewdate
+        let dao = NoteDAO.sharedInstance
+        dao.IDfind(fetchDate)
+        print(dao.IDfind(fetchDate))
+        
+       
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let destination = storyboard.instantiateViewController(withIdentifier: "rijidetails") //as? SecondViewController
+        let controller = destination as! ViewController_riji_details
+        
+        let result :riji = dao.IDfind(fetchDate)!
+        
+        //print(result.text)
+        
+        controller.detailItem = result
+        
+        //controller.detailItem = dao.IDfind(fetchDate)
+        
+       
+        
+        self.navigationController?.pushViewController(destination, animated: true)
+        
+        }
+        
+        
+        //let controller = UIViewController as! ViewController_historydetail
+       // controller.detailItem = dao.IDfind(fetchDate)
+            
+       
+    
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
+        
+    
+    
+    @IBAction func back(_ sender: Any) {
+        self.dismiss(animated: true)
     }
-    */
-
+    
 }
+
+

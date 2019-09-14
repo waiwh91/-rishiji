@@ -49,12 +49,16 @@ class ViewController_mood: UIViewController, UIPickerViewDataSource, UIPickerVie
             self.present(alert, animated: true, completion: nil)
         }else{
             let dao = NoteDAO.sharedInstance
-            dao.create(rijitext)
             
-            let reslist = dao.findAll()
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let rijiroot = storyboard.instantiateViewController(withIdentifier: "riji_root") as! UITabBarController
-            self.present(rijiroot, animated: true, completion: nil)
+                dao.create(rijitext)
+                
+                let reslist = dao.findAll()
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let rijiroot = storyboard.instantiateViewController(withIdentifier: "riji_root") as! UITabBarController
+                self.present(rijiroot, animated: true, completion: nil)
+            
+            
+            
         }
         
     }

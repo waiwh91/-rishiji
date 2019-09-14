@@ -27,6 +27,8 @@ class TableViewController_riji: UITableViewController {
         //查询所有数据
         self.listData = dao.findAll()
         //print(listData)
+        
+       
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -36,6 +38,7 @@ class TableViewController_riji: UITableViewController {
         self.tableView.reloadData()
         super.viewWillAppear(animated)
     }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
@@ -67,7 +70,7 @@ class TableViewController_riji: UITableViewController {
         
         
         let dateformatter = DateFormatter()
-        dateformatter.dateFormat = "yyyy/MM/dd"
+        dateformatter.dateFormat = "yyyy-MM-dd"
         let date = dateformatter.string(from: note.date as Date)
         
         var text : String
