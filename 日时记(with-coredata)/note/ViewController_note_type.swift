@@ -8,11 +8,13 @@
 
 import UIKit
 
-class ViewController_note_type: UIViewController {
+class ViewController_note_type: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
     
     let notetypearry = ["空便签","待办事项","事件记录"]
+    var temp : Int = 0
 
-    @IBOutlet weak var picker: UIPickerView!
+    @IBOutlet weak var typepicker: UIPickerView!
+    
     
     @IBOutlet weak var cancel: UIBarButtonItem!
     
@@ -30,23 +32,36 @@ class ViewController_note_type: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    
-    func numberOfComponents(in picker: UIPickerView) -> Int {
+    func numberOfComponents(in type: UIPickerView) -> Int {
         return 1
     }
     
-    func picker(_ picker: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    func pickerView(_ typepicker: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return self.notetypearry.count
     }
     
-    func picker(_ picker: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    @IBAction func enter(_ sender: Any) {
         
+    }
+    
+    func pickerView(_ typepicker: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        let word = self.notetypearry[row]
+        switch word {
+        case "空便签":
+            self.temp = 1
+        case "代办事项":
+            self.temp = 2
+        case "时间记录":
+            self.temp = 3
+        default:
+            self.temp = 0
+        }
         return self.notetypearry[row]as? String
     }
     
     
     /*
-    // MARK: - Navigation
+     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

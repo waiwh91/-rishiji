@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -14,7 +11,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="日时记_with_coredata_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="永远年轻，" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFj-Rz-kX2">
@@ -53,7 +50,7 @@
             <objects>
                 <viewController id="yq6-cu-x21" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wDo-j4-hsW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="日历bg" translatesAutoresizingMaskIntoConstraints="NO" id="7qf-o8-Wy9">
@@ -61,7 +58,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ei0-Iz-bdm">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="日历" id="vAH-Sg-WiT"/>
@@ -82,26 +79,26 @@
             <objects>
                 <tableViewController id="Fs3-sp-7jW" customClass="TableViewController_riji" customModule="日时记_with_coredata_" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="B8J-5O-aLw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellIdentifier" textLabel="BWr-gT-Wnf" detailTextLabel="Q6q-i8-Pfr" style="IBUITableViewCellStyleValue1" id="0hG-t3-Mnc">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0hG-t3-Mnc" id="BpF-tE-HZV">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BWr-gT-Wnf">
-                                            <rect key="frame" x="16" y="12" width="33.5" height="20.5"/>
+                                            <rect key="frame" x="20" y="11" width="34" height="21"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Q6q-i8-Pfr">
-                                            <rect key="frame" x="315" y="12" width="44" height="20.5"/>
+                                            <rect key="frame" x="536" y="11" width="44" height="21"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -146,7 +143,7 @@
             <objects>
                 <viewController id="Eh2-ae-9cc" customClass="ViewController_notes_" customModule="日时记_with_coredata_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HMW-Yx-TG2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="便签bg-1" translatesAutoresizingMaskIntoConstraints="NO" id="1Aj-xc-F1x">
@@ -208,7 +205,7 @@
             <objects>
                 <viewController id="DdT-bV-adK" customClass="ViewController_mood" customModule="日时记_with_coredata_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bl7-pg-f1b">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mood_bg" translatesAutoresizingMaskIntoConstraints="NO" id="GCj-OI-lXj">
@@ -216,7 +213,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ebM-n9-LGQ">
-                                <rect key="frame" x="0.0" y="416" width="375" height="251"/>
+                                <rect key="frame" x="0.0" y="416" width="600" height="251"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <outlet property="dataSource" destination="DdT-bV-adK" id="hgC-Z0-g5Q"/>
@@ -314,7 +311,7 @@
             <objects>
                 <viewController storyboardIdentifier="rijidetails" id="Cpd-sg-hd9" customClass="ViewController_riji_details" customModule="日时记_with_coredata_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fd7-ZC-4XJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="便签bg-1" translatesAutoresizingMaskIntoConstraints="NO" id="P6d-n1-gNZ">
@@ -380,7 +377,7 @@
             <objects>
                 <viewController id="lnT-Tb-5Li" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rOD-xR-q8l">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="便签bg" translatesAutoresizingMaskIntoConstraints="NO" id="pAb-Kk-OYy">
@@ -388,12 +385,16 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jk2-ZL-FTM">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="便签" id="5pT-jB-x9Y">
                                         <barButtonItem key="leftBarButtonItem" title="编辑" image="调整" id="9qB-By-ny0"/>
-                                        <barButtonItem key="rightBarButtonItem" title="新建" image="新建" id="eGW-Aq-RCy"/>
+                                        <barButtonItem key="rightBarButtonItem" title="新建" image="新建" id="eGW-Aq-RCy">
+                                            <connections>
+                                                <segue destination="rlj-7f-rBd" kind="presentation" id="tZH-mG-6uM"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -409,72 +410,83 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JEl-m5-bE1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1303" y="-1666"/>
+            <point key="canvasLocation" x="1353" y="-2544"/>
         </scene>
         <!--View Controller note type-->
-        <scene sceneID="U73-1C-aIz">
+        <scene sceneID="da0-LA-6pT">
             <objects>
-                <viewController id="3OD-nN-ItU" customClass="ViewController_note_type" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8EI-je-L8i" customClass="Uviewcon">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="3Fy-4R-JW4" customClass="ViewController_note_type" customModule="日时记_with_coredata_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iVv-p9-BZE">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AVf-xA-Em6">
-                                <rect key="frame" x="0.0" y="317" width="375" height="350"/>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c0Q-sl-LGx">
+                                <rect key="frame" x="0.0" y="451" width="600" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="3OD-nN-ItU" id="jHI-FG-L1b"/>
-                                    <outlet property="delegate" destination="3OD-nN-ItU" id="dmJ-n8-MzC"/>
+                                    <outlet property="dataSource" destination="3Fy-4R-JW4" id="VaU-IO-EvH"/>
+                                    <outlet property="delegate" destination="3Fy-4R-JW4" id="s7v-ky-RZP"/>
                                 </connections>
                             </pickerView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="选择一个便签类型～" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yvp-L2-44W">
-                                <rect key="frame" x="102" y="177" width="266" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="XLP-Ro-Azk"/>
+                        <viewLayoutGuide key="safeArea" id="Ieo-94-FwE"/>
                     </view>
-                    <navigationItem key="navigationItem" id="3Rt-2v-ZHT">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="tQR-Rd-mwW">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="luZ-SU-v0A">
+                    <navigationItem key="navigationItem" id="Fcn-Yc-KYn">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="fea-tI-sVg">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Vd2-qM-NgZ">
                                 <rect key="frame" x="16" y="5.5" width="83" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="返回"/>
+                                <state key="normal" title="取消"/>
+                                <connections>
+                                    <action selector="cancel:" destination="3Fy-4R-JW4" eventType="touchUpInside" id="23X-eo-wQM"/>
+                                </connections>
                             </button>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="Bot-8N-oyY">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pUm-Ms-dBH">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="J62-Wh-mWe">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MRx-7Y-LRY">
                                 <rect key="frame" x="276" y="5.5" width="83" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="确定"/>
                             </button>
                             <connections>
-                                <action selector="cancel:" destination="3OD-nN-ItU" id="1Gk-jk-nyD"/>
+                                <action selector="enter:" destination="3Fy-4R-JW4" id="oyu-1m-WvO"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="cancel" destination="tQR-Rd-mwW" id="o0q-OY-Zyg"/>
-                        <outlet property="picker" destination="AVf-xA-Em6" id="SgB-NV-yhQ"/>
-                        <outlet property="yes" destination="Bot-8N-oyY" id="q78-l2-Zqw"/>
+                        <outlet property="cancel" destination="fea-tI-sVg" id="o1P-hv-Dxg"/>
+                        <outlet property="typepicker" destination="c0Q-sl-LGx" id="P29-ND-sFq"/>
+                        <outlet property="yes" destination="J62-Wh-mWe" id="40c-Qt-B1o"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uJG-hD-IrW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bq1-2t-SeD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2888.8000000000002" y="-1666.4167916041981"/>
+            <point key="canvasLocation" x="3062" y="-2544"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="wO5-Ln-0P4">
+            <objects>
+                <viewController id="xA3-d0-zDI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HuL-0x-1rN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="CWf-pg-CZH"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i5f-hs-NBv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4649" y="-2569"/>
         </scene>
         <!--Data Source-->
         <scene sceneID="Dez-Vi-Cq3">
             <objects>
                 <viewController id="97z-o0-Hji" customClass="ViewControlle_history" customModule="日时记_with_coredata_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tws-xZ-5Y6">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lbt-1Y-ZrK" customClass="FSCalendar">
@@ -503,7 +515,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PTU-Xq-GwH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3768.8000000000002" y="-269.41529235382313"/>
+            <point key="canvasLocation" x="3654" y="-269"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="jIJ-OS-uYw">
@@ -562,22 +574,22 @@
             <point key="canvasLocation" x="2829.5999999999999" y="-269.41529235382313"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="OU8-3Z-f9Y">
+        <scene sceneID="8Ft-Vx-C6b">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jOO-k9-KmK" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rlj-7f-rBd" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uXr-4i-7ak">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0Dq-4n-i6p">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="3OD-nN-ItU" kind="relationship" relationship="rootViewController" id="XfV-ah-fBW"/>
+                        <segue destination="3Fy-4R-JW4" kind="relationship" relationship="rootViewController" id="Sse-5a-CIO"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3tB-ah-TuX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QgC-Q4-0sw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2134" y="-1666"/>
+            <point key="canvasLocation" x="2265" y="-2544"/>
         </scene>
     </scenes>
     <resources>
