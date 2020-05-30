@@ -70,22 +70,30 @@ class ViewControlle_history: UIViewController,FSCalendarDelegate,FSCalendarDataS
         dao.IDfind(fetchDate)
         print(dao.IDfind(fetchDate))
         
+        if dao.IDfind(fetchDate) != nil {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let destination = storyboard.instantiateViewController(withIdentifier: "rijidetails") //as? SecondViewController
+            let controller = destination as! ViewController_riji_details
+            
+            let result :riji = dao.IDfind(fetchDate)!
+            
+            //print(result.text)
+            
+            controller.detailItem = result
+            
+            //controller.detailItem = dao.IDfind(fetchDate)
+            
+            
+            
+            self.navigationController?.pushViewController(destination, animated: true)
+            
+        }else{
+            let alertcontroller = UIAlertController(title: "嗯哼？", message: "你在那天似乎并没有写什么东西哦", preferredStyle: .alert)
+            let cancelaction = UIAlertAction(title: "好吧", style: .cancel, handler: nil)
+            alertcontroller.addAction(cancelaction)
+            self.present(alertcontroller, animated: true, completion: nil)
+        }
        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let destination = storyboard.instantiateViewController(withIdentifier: "rijidetails") //as? SecondViewController
-        let controller = destination as! ViewController_riji_details
-        
-        let result :riji = dao.IDfind(fetchDate)!
-        
-        //print(result.text)
-        
-        controller.detailItem = result
-        
-        //controller.detailItem = dao.IDfind(fetchDate)
-        
-       
-        
-        self.navigationController?.pushViewController(destination, animated: true)
         
         }
         
