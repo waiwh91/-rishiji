@@ -1,24 +1,41 @@
 //
-//  ViewController_note_recording.swift
+//  ViewController_note_details.swift
 //  日时记
 //
-//  Created by Martin Zhang on 2020/5/30.
+//  Created by 张晨阳 on 2020/6/27.
 //  Copyright © 2020 Martin Zhang. All rights reserved.
 //
 
 import UIKit
 
-class ViewController_note_recording: UIViewController {
+class ViewController_note_details: UIViewController,UITextViewDelegate {
 
+    var notetext = note()
+    
+    @IBOutlet weak var textview: UITextView!
+    
+    @IBOutlet weak var nicky: UINavigationItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.textview.text = self.notetext.text
+                       
+                       let dateFormate = DateFormatter()
+                       dateFormate.dateFormat = "yyyy-MM-dd"
+               let date = dateFormate.string(from: self.notetext.date as Date)
+                       self.navigationItem.title = date
+       // print("wdnmddd")
         // Do any additional setup after loading the view.
     }
     
     @IBAction func back(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+   
+        }
+
+
     
     /*
     // MARK: - Navigation
@@ -30,4 +47,4 @@ class ViewController_note_recording: UIViewController {
     }
     */
 
-}
+

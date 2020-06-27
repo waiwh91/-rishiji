@@ -7,14 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9C02B48324824CF1000794B3 /* ViewController_empty_note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C02B48224824CF1000794B3 /* ViewController_empty_note.swift */; };
-		9C02B485248255A3000794B3 /* ViewController_note_todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C02B484248255A3000794B3 /* ViewController_note_todo.swift */; };
-		9C02B48724825609000794B3 /* ViewController_note_recording.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C02B48624825609000794B3 /* ViewController_note_recording.swift */; };
-		9C02B48924825C08000794B3 /* TableViewController_note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C02B48824825C08000794B3 /* TableViewController_note.swift */; };
+		120F030D24A4E0DA00EE3569 /* Notes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 120F030B24A4E0DA00EE3569 /* Notes.xcdatamodeld */; };
+		120F031324A4E5E200EE3569 /* UIviewTableViewController_note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120F031224A4E5E200EE3569 /* UIviewTableViewController_note.swift */; };
+		120F031524A4E68400EE3569 /* NoteDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120F031424A4E68400EE3569 /* NoteDAO.swift */; };
+		120F031724A4E6E000EE3569 /* note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120F031624A4E6E000EE3569 /* note.swift */; };
+		120F031B24A4EA3B00EE3569 /* ViewController_note_add.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120F031A24A4EA3B00EE3569 /* ViewController_note_add.swift */; };
+		120F031D24A4EE3700EE3569 /* ViewController_note_type_selection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120F031C24A4EE3700EE3569 /* ViewController_note_type_selection.swift */; };
+		1217F8B324A5E58D00510FF1 /* ViewController_note_todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1217F8B224A5E58D00510FF1 /* ViewController_note_todo.swift */; };
+		1217F8B524A5E5B900510FF1 /* ViewController_note_reminds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1217F8B424A5E5B900510FF1 /* ViewController_note_reminds.swift */; };
+		121D07B624A6632700D2DF62 /* ViewController_reminds_picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121D07B524A6632700D2DF62 /* ViewController_reminds_picker.swift */; };
+		121D07B824A66CCD00D2DF62 /* clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121D07B724A66CCD00D2DF62 /* clock.swift */; };
+		121D07BA24A6832200D2DF62 /* ViewController_note_details.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121D07B924A6832200D2DF62 /* ViewController_note_details.swift */; };
+		122D0B7124A62A0B004E2B4E /* NoteDAO_Father.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D0B7024A62A0B004E2B4E /* NoteDAO_Father.swift */; };
 		9C24D4FD21CE3A2C00169290 /* CoreDataDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C24D4FC21CE3A2C00169290 /* CoreDataDAO.swift */; };
-		9C53FEAA233F1DBD00564DD2 /* ViewController_note_type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C53FEA9233F1DBD00564DD2 /* ViewController_note_type.swift */; };
 		9C6B8D7D21959B6D005A6DE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6B8D7C21959B6D005A6DE6 /* AppDelegate.swift */; };
-		9C6B8D7F21959B6D005A6DE6 /* ViewController(hello).swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6B8D7E21959B6D005A6DE6 /* ViewController(hello).swift */; };
+		9C6B8D7F21959B6D005A6DE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6B8D7E21959B6D005A6DE6 /* ViewController.swift */; };
 		9C6B8D8221959B6D005A6DE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C6B8D8021959B6D005A6DE6 /* Main.storyboard */; };
 		9C6B8D8521959B6D005A6DE6 /* ____with_coredata_.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9C6B8D8321959B6D005A6DE6 /* ____with_coredata_.xcdatamodeld */; };
 		9C6B8D8721959B70005A6DE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C6B8D8621959B70005A6DE6 /* Assets.xcassets */; };
@@ -100,16 +107,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		9C53FE97233F12E500564DD2 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9CF002A82201C99000CBACC3 /* Embed PlugIns */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -123,25 +120,31 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9C02B48224824CF1000794B3 /* ViewController_empty_note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_empty_note.swift; sourceTree = "<group>"; };
-		9C02B484248255A3000794B3 /* ViewController_note_todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_note_todo.swift; sourceTree = "<group>"; };
-		9C02B48624825609000794B3 /* ViewController_note_recording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_note_recording.swift; sourceTree = "<group>"; };
-		9C02B48824825C08000794B3 /* TableViewController_note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController_note.swift; sourceTree = "<group>"; };
+		120F030C24A4E0DA00EE3569 /* Notes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Notes.xcdatamodel; sourceTree = "<group>"; };
+		120F031224A4E5E200EE3569 /* UIviewTableViewController_note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIviewTableViewController_note.swift; sourceTree = "<group>"; };
+		120F031424A4E68400EE3569 /* NoteDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDAO.swift; sourceTree = "<group>"; };
+		120F031624A4E6E000EE3569 /* note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = note.swift; sourceTree = "<group>"; };
+		120F031A24A4EA3B00EE3569 /* ViewController_note_add.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_note_add.swift; sourceTree = "<group>"; };
+		120F031C24A4EE3700EE3569 /* ViewController_note_type_selection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_note_type_selection.swift; sourceTree = "<group>"; };
+		1217F8B224A5E58D00510FF1 /* ViewController_note_todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_note_todo.swift; sourceTree = "<group>"; };
+		1217F8B424A5E5B900510FF1 /* ViewController_note_reminds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_note_reminds.swift; sourceTree = "<group>"; };
+		121D07B524A6632700D2DF62 /* ViewController_reminds_picker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_reminds_picker.swift; sourceTree = "<group>"; };
+		121D07B724A66CCD00D2DF62 /* clock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clock.swift; sourceTree = "<group>"; };
+		121D07B924A6832200D2DF62 /* ViewController_note_details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_note_details.swift; sourceTree = "<group>"; };
+		122D0B7024A62A0B004E2B4E /* NoteDAO_Father.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDAO_Father.swift; sourceTree = "<group>"; };
 		9C24D4FC21CE3A2C00169290 /* CoreDataDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataDAO.swift; sourceTree = "<group>"; };
-		9C53FE8C233F10A500564DD2 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = "ios-i386_x86_64-simulator/Kingfisher.framework"; sourceTree = "<group>"; };
-		9C53FEA9233F1DBD00564DD2 /* ViewController_note_type.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_note_type.swift; sourceTree = "<group>"; };
 		9C6B8D7921959B6D005A6DE6 /* 日时记.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "日时记.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C6B8D7C21959B6D005A6DE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9C6B8D7E21959B6D005A6DE6 /* ViewController(hello).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController(hello).swift"; sourceTree = "<group>"; };
+		9C6B8D7E21959B6D005A6DE6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9C6B8D8121959B6D005A6DE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9C6B8D8421959B6D005A6DE6 /* ____with_coredata_.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "____with_coredata_.xcdatamodel"; sourceTree = "<group>"; };
 		9C6B8D8621959B70005A6DE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C6B8D8921959B70005A6DE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C6B8D8B21959B70005A6DE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9C6B8D9021959B70005A6DE6 /* 日时记Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "日时记Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C6B8D9021959B70005A6DE6 /* 日时记(with-coredata)Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "日时记(with-coredata)Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C6B8D9421959B70005A6DE6 /* ____with_coredata_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "____with_coredata_Tests.swift"; sourceTree = "<group>"; };
 		9C6B8D9621959B70005A6DE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
-		9C6B8D9B21959B70005A6DE6 /* 日时记UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "日时记UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C6B8D9B21959B70005A6DE6 /* 日时记(with-coredata)UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "日时记(with-coredata)UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C6B8D9F21959B70005A6DE6 /* ____with_coredata_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "____with_coredata_UITests.swift"; sourceTree = "<group>"; };
 		9C6B8DA121959B70005A6DE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C7E511A21D8E17C0061D526 /* ViewController_riji_details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_riji_details.swift; sourceTree = "<group>"; };
@@ -220,20 +223,9 @@
 			isa = PBXGroup;
 			children = (
 				9C8BA47E219EEE4700922231 /* Texts.xcdatamodeld */,
+				120F030B24A4E0DA00EE3569 /* Notes.xcdatamodeld */,
 			);
 			path = CoreData;
-			sourceTree = "<group>";
-		};
-		9C53FEAC233F1DC800564DD2 /* note */ = {
-			isa = PBXGroup;
-			children = (
-				9C02B48824825C08000794B3 /* TableViewController_note.swift */,
-				9C53FEA9233F1DBD00564DD2 /* ViewController_note_type.swift */,
-				9C02B48224824CF1000794B3 /* ViewController_empty_note.swift */,
-				9C02B484248255A3000794B3 /* ViewController_note_todo.swift */,
-				9C02B48624825609000794B3 /* ViewController_note_recording.swift */,
-			);
-			path = note;
 			sourceTree = "<group>";
 		};
 		9C6B8D7021959B6D005A6DE6 = {
@@ -256,8 +248,8 @@
 			isa = PBXGroup;
 			children = (
 				9C6B8D7921959B6D005A6DE6 /* 日时记.app */,
-				9C6B8D9021959B70005A6DE6 /* 日时记Tests.xctest */,
-				9C6B8D9B21959B70005A6DE6 /* 日时记UITests.xctest */,
+				9C6B8D9021959B70005A6DE6 /* 日时记(with-coredata)Tests.xctest */,
+				9C6B8D9B21959B70005A6DE6 /* 日时记(with-coredata)UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -265,10 +257,10 @@
 		9C6B8D7B21959B6D005A6DE6 /* 日时记(with-coredata) */ = {
 			isa = PBXGroup;
 			children = (
-				9C53FEAC233F1DC800564DD2 /* note */,
+				9CC798202222319A002F3E4D /* note */,
 				9C836B3821CD01BB00208D03 /* riji */,
 				9C6B8D7C21959B6D005A6DE6 /* AppDelegate.swift */,
-				9C6B8D7E21959B6D005A6DE6 /* ViewController(hello).swift */,
+				9C6B8D7E21959B6D005A6DE6 /* ViewController.swift */,
 				9C6B8D8021959B6D005A6DE6 /* Main.storyboard */,
 				9C6B8D8621959B70005A6DE6 /* Assets.xcassets */,
 				9C17193121FAB5490066B573 /* CoreData */,
@@ -302,6 +294,8 @@
 			children = (
 				9C24D4FC21CE3A2C00169290 /* CoreDataDAO.swift */,
 				9C836B3521CCF90600208D03 /* rijiDAO.swift */,
+				120F031424A4E68400EE3569 /* NoteDAO.swift */,
+				122D0B7024A62A0B004E2B4E /* NoteDAO_Father.swift */,
 			);
 			path = DAO;
 			sourceTree = "<group>";
@@ -321,6 +315,22 @@
 			path = riji;
 			sourceTree = "<group>";
 		};
+		9CC798202222319A002F3E4D /* note */ = {
+			isa = PBXGroup;
+			children = (
+				120F031224A4E5E200EE3569 /* UIviewTableViewController_note.swift */,
+				120F031624A4E6E000EE3569 /* note.swift */,
+				120F031A24A4EA3B00EE3569 /* ViewController_note_add.swift */,
+				120F031C24A4EE3700EE3569 /* ViewController_note_type_selection.swift */,
+				1217F8B224A5E58D00510FF1 /* ViewController_note_todo.swift */,
+				1217F8B424A5E5B900510FF1 /* ViewController_note_reminds.swift */,
+				121D07B524A6632700D2DF62 /* ViewController_reminds_picker.swift */,
+				121D07B724A66CCD00D2DF62 /* clock.swift */,
+				121D07B924A6832200D2DF62 /* ViewController_note_details.swift */,
+			);
+			path = note;
+			sourceTree = "<group>";
+		};
 		9CECF8D121FAE6310079EDAF /* mood */ = {
 			isa = PBXGroup;
 			children = (
@@ -332,7 +342,6 @@
 		9CF003302201D4D200CBACC3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9C53FE8C233F10A500564DD2 /* Kingfisher.framework */,
 				9CF003312201D4D300CBACC3 /* FSCalendar.framework */,
 			);
 			name = Frameworks;
@@ -387,7 +396,6 @@
 				9C6B8D7621959B6D005A6DE6 /* Frameworks */,
 				9C6B8D7721959B6D005A6DE6 /* Resources */,
 				9CF002A82201C99000CBACC3 /* Embed PlugIns */,
-				9C53FE97233F12E500564DD2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -398,9 +406,9 @@
 			productReference = 9C6B8D7921959B6D005A6DE6 /* 日时记.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9C6B8D8F21959B70005A6DE6 /* 日时记Tests */ = {
+		9C6B8D8F21959B70005A6DE6 /* 日时记(with-coredata)Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9C6B8DA721959B70005A6DE6 /* Build configuration list for PBXNativeTarget "日时记Tests" */;
+			buildConfigurationList = 9C6B8DA721959B70005A6DE6 /* Build configuration list for PBXNativeTarget "日时记(with-coredata)Tests" */;
 			buildPhases = (
 				9C6B8D8C21959B70005A6DE6 /* Sources */,
 				9C6B8D8D21959B70005A6DE6 /* Frameworks */,
@@ -411,14 +419,14 @@
 			dependencies = (
 				9C6B8D9221959B70005A6DE6 /* PBXTargetDependency */,
 			);
-			name = "日时记Tests";
+			name = "日时记(with-coredata)Tests";
 			productName = "日时记(with-coredata)Tests";
-			productReference = 9C6B8D9021959B70005A6DE6 /* 日时记Tests.xctest */;
+			productReference = 9C6B8D9021959B70005A6DE6 /* 日时记(with-coredata)Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		9C6B8D9A21959B70005A6DE6 /* 日时记UITests */ = {
+		9C6B8D9A21959B70005A6DE6 /* 日时记(with-coredata)UITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9C6B8DAA21959B70005A6DE6 /* Build configuration list for PBXNativeTarget "日时记UITests" */;
+			buildConfigurationList = 9C6B8DAA21959B70005A6DE6 /* Build configuration list for PBXNativeTarget "日时记(with-coredata)UITests" */;
 			buildPhases = (
 				9C6B8D9721959B70005A6DE6 /* Sources */,
 				9C6B8D9821959B70005A6DE6 /* Frameworks */,
@@ -429,9 +437,9 @@
 			dependencies = (
 				9C6B8D9D21959B70005A6DE6 /* PBXTargetDependency */,
 			);
-			name = "日时记UITests";
+			name = "日时记(with-coredata)UITests";
 			productName = "日时记(with-coredata)UITests";
-			productReference = 9C6B8D9B21959B70005A6DE6 /* 日时记UITests.xctest */;
+			productReference = 9C6B8D9B21959B70005A6DE6 /* 日时记(with-coredata)UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -460,7 +468,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9C6B8D7421959B6D005A6DE6 /* Build configuration list for PBXProject "日时记" */;
+			buildConfigurationList = 9C6B8D7421959B6D005A6DE6 /* Build configuration list for PBXProject "日时记(with-coredata)" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -474,8 +482,8 @@
 			projectRoot = "";
 			targets = (
 				9C6B8D7821959B6D005A6DE6 /* 日时记 */,
-				9C6B8D8F21959B70005A6DE6 /* 日时记Tests */,
-				9C6B8D9A21959B70005A6DE6 /* 日时记UITests */,
+				9C6B8D8F21959B70005A6DE6 /* 日时记(with-coredata)Tests */,
+				9C6B8D9A21959B70005A6DE6 /* 日时记(with-coredata)UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -513,37 +521,44 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C6B8D8521959B6D005A6DE6 /* ____with_coredata_.xcdatamodeld in Sources */,
+				1217F8B524A5E5B900510FF1 /* ViewController_note_reminds.swift in Sources */,
+				120F031724A4E6E000EE3569 /* note.swift in Sources */,
+				120F030D24A4E0DA00EE3569 /* Notes.xcdatamodeld in Sources */,
 				9CF0037B2201D5F300CBACC3 /* FSCalendarConstants.m in Sources */,
-				9C02B485248255A3000794B3 /* ViewController_note_todo.swift in Sources */,
-				9C02B48324824CF1000794B3 /* ViewController_empty_note.swift in Sources */,
-				9C6B8D7F21959B6D005A6DE6 /* ViewController(hello).swift in Sources */,
+				9C6B8D7F21959B6D005A6DE6 /* ViewController.swift in Sources */,
 				9CA8E88D2324A29400C3EFD8 /* ViewController_mood.swift in Sources */,
 				9CF0037E2201D5F300CBACC3 /* FSCalendarCollectionView.m in Sources */,
 				9C836B3A21CD029D00208D03 /* riji.swift in Sources */,
 				9CD1759321F413DB007FF33D /* TableViewController_riji.swift in Sources */,
 				9CF002A42201C95100CBACC3 /* ViewControlle_history.swift in Sources */,
+				1217F8B324A5E58D00510FF1 /* ViewController_note_todo.swift in Sources */,
 				9CECF8CE21FAE6190079EDAF /* ViewController_mood.swift in Sources */,
 				9CF0035A2201D5F200CBACC3 /* FSCalendarAppearance.m in Sources */,
 				9CF003752201D5F300CBACC3 /* FSCalendarStickyHeader.m in Sources */,
 				9CF0035D2201D5F200CBACC3 /* FSCalendarWeekdayView.m in Sources */,
 				9C6B8D7D21959B6D005A6DE6 /* AppDelegate.swift in Sources */,
 				9CF003782201D5F300CBACC3 /* FSCalendarTransitionCoordinator.m in Sources */,
+				120F031324A4E5E200EE3569 /* UIviewTableViewController_note.swift in Sources */,
+				121D07BA24A6832200D2DF62 /* ViewController_note_details.swift in Sources */,
 				9CF0036F2201D5F300CBACC3 /* FSCalendarCollectionViewLayout.m in Sources */,
+				121D07B624A6632700D2DF62 /* ViewController_reminds_picker.swift in Sources */,
 				9CF003572201D5F200CBACC3 /* FSCalendarCalculator.m in Sources */,
+				120F031524A4E68400EE3569 /* NoteDAO.swift in Sources */,
 				9CF003812201D5F300CBACC3 /* FSCalendarDelegationProxy.m in Sources */,
 				9C7E511B21D8E17C0061D526 /* ViewController_riji_details.swift in Sources */,
+				120F031B24A4EA3B00EE3569 /* ViewController_note_add.swift in Sources */,
 				9C24D4FD21CE3A2C00169290 /* CoreDataDAO.swift in Sources */,
 				9CA8E8912324A68000C3EFD8 /* riji.swift in Sources */,
 				9CF003692201D5F200CBACC3 /* FSCalendarExtensions.m in Sources */,
-				9C02B48924825C08000794B3 /* TableViewController_note.swift in Sources */,
+				122D0B7124A62A0B004E2B4E /* NoteDAO_Father.swift in Sources */,
 				9C836B3621CCF90600208D03 /* rijiDAO.swift in Sources */,
 				9CF0036C2201D5F300CBACC3 /* FSCalendar.m in Sources */,
 				9C8D773421B145AD00022EB0 /* ViewController(notes).swift in Sources */,
 				9CF003602201D5F200CBACC3 /* FSCalendarCell.m in Sources */,
+				121D07B824A66CCD00D2DF62 /* clock.swift in Sources */,
 				9CF003722201D5F300CBACC3 /* FSCalendarHeaderView.m in Sources */,
-				9C53FEAA233F1DBD00564DD2 /* ViewController_note_type.swift in Sources */,
-				9C02B48724825609000794B3 /* ViewController_note_recording.swift in Sources */,
 				9CF003662201D5F200CBACC3 /* FSCalendarSeparatorDecorationView.m in Sources */,
+				120F031D24A4EE3700EE3569 /* ViewController_note_type_selection.swift in Sources */,
 				9CF003632201D5F200CBACC3 /* FSCalendarDelegationFactory.m in Sources */,
 				9C8BA480219EEE4700922231 /* Texts.xcdatamodeld in Sources */,
 			);
@@ -753,6 +768,7 @@
 		9C6B8DA521959B70005A6DE6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -760,12 +776,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/ios-i386_x86_64-simulator",
-					"$(PROJECT_DIR)/ios-armv7_arm64",
 				);
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "日时记(with-coredata)/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -782,6 +796,7 @@
 		9C6B8DA621959B70005A6DE6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -789,12 +804,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/ios-i386_x86_64-simulator",
-					"$(PROJECT_DIR)/ios-armv7_arm64",
 				);
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "日时记(with-coredata)/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -827,7 +840,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/日时记.app/日时记";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/日时记(with-coredata).app/日时记(with-coredata)";
 			};
 			name = Debug;
 		};
@@ -850,7 +863,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "日时记(with-coredata)Tests-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/日时记.app/日时记";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/日时记(with-coredata).app/日时记(with-coredata)";
 			};
 			name = Release;
 		};
@@ -902,7 +915,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9C6B8D7421959B6D005A6DE6 /* Build configuration list for PBXProject "日时记" */ = {
+		9C6B8D7421959B6D005A6DE6 /* Build configuration list for PBXProject "日时记(with-coredata)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9C6B8DA221959B70005A6DE6 /* Debug */,
@@ -920,7 +933,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9C6B8DA721959B70005A6DE6 /* Build configuration list for PBXNativeTarget "日时记Tests" */ = {
+		9C6B8DA721959B70005A6DE6 /* Build configuration list for PBXNativeTarget "日时记(with-coredata)Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9C6B8DA821959B70005A6DE6 /* Debug */,
@@ -929,7 +942,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9C6B8DAA21959B70005A6DE6 /* Build configuration list for PBXNativeTarget "日时记UITests" */ = {
+		9C6B8DAA21959B70005A6DE6 /* Build configuration list for PBXNativeTarget "日时记(with-coredata)UITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9C6B8DAB21959B70005A6DE6 /* Debug */,
@@ -941,6 +954,16 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
+		120F030B24A4E0DA00EE3569 /* Notes.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				120F030C24A4E0DA00EE3569 /* Notes.xcdatamodel */,
+			);
+			currentVersion = 120F030C24A4E0DA00EE3569 /* Notes.xcdatamodel */;
+			path = Notes.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		9C6B8D8321959B6D005A6DE6 /* ____with_coredata_.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (

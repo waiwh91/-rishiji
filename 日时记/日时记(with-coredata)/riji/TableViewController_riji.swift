@@ -41,16 +41,17 @@ class TableViewController_riji: UITableViewController {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showDetail" {
-            if let indexPath = self.tableView.indexPathForSelectedRow {
-                let note = self.listData[indexPath.row] as! riji
-                let controller = (segue.destination as! UINavigationController).topViewController as! ViewController_riji_details
-                controller.detailItem = note
-                controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
-                controller.navigationItem.leftItemsSupplementBackButton = true
-            }
-        }
-    }
+           if segue.identifier == "showDetail" {
+               if let indexPath = self.tableView.indexPathForSelectedRow {
+                   let note = self.listData[indexPath.row] as! riji
+                   let controller = (segue.destination as! UINavigationController).topViewController as! ViewController_riji_details
+                   controller.detailItem = note
+                   controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
+                   controller.navigationItem.leftItemsSupplementBackButton = true
+               }
+           }
+       }
+       
     
     
     // MARK: - Table view data source

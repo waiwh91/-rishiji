@@ -77,7 +77,6 @@ class ViewController_mood: UIViewController, UIPickerViewDataSource, UIPickerVie
             return self.moodarry.count
     }
     
-    
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         
             return self.moodarry[row]as? String
@@ -91,21 +90,21 @@ class ViewController_mood: UIViewController, UIPickerViewDataSource, UIPickerVie
         case "选择一个心情～" :
             moodlabel.text = "你真的不想选择一个心情？"
         case "😊":
-            moodlabel.text = "今天也是开心的一天呢！"
+            moodlabel.text = ""
         case "😭":
-            moodlabel.text = "别伤心啦，打开哔哩哔哩一起嗨啊"
+            moodlabel.text = ""
         case "😂":
-            moodlabel.text = "不行！！！你不可以这么不严肃！！！"
+            moodlabel.text = ""
         case "🤔":
-            moodlabel.text = "思考与不思考，这是一个问题"
+            moodlabel.text = ""
         case "😷":
-            moodlabel.text = "良药苦口利于病嘛"
+            moodlabel.text = ""
         case "😡":
-            moodlabel.text = "www.bilibili.com欢迎你"
+            moodlabel.text = ""
         case "😰":
-            moodlabel.text = "别再担心啦！都是浮云啦"
+            moodlabel.text = ""
         case "😱":
-            moodlabel.text = "打开日时记，贞子都会怕你！！！"
+            moodlabel.text = ""
         default :
             moodlabel.text = ""
         }

@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import UserNotifications
 
 
     //coredata支持
@@ -15,9 +16,45 @@ import CoreData
     class AppDelegate: UIResponder, UIApplicationDelegate ,UISplitViewControllerDelegate {
         
         var window: UIWindow?
+       var backgroundTask:UIBackgroundTaskIdentifier! = nil
         
         
-        func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool { return true }
+        
+        func applicationDidEnterBackground(_ application: UIApplication) {
+               
+            // 延迟程序静止的时间
+            DispatchQueue.global().async() {
+                //如果已存在后台任务，先将其设为完成
+                if self.backgroundTask != nil {
+                    application.endBackgroundTask(self.backgroundTask)
+                    self.backgroundTask = UIBackgroundTaskIdentifier.invalid
+                }
+            }
+               
+            //如果要后台运行
+            self.backgroundTask = application.beginBackgroundTask(expirationHandler: {
+                   () -> Void in
+                //如果没有调用endBackgroundTask，时间耗尽时应用程序将被终止
+                application.endBackgroundTask(self.backgroundTask)
+                self.backgroundTask = UIBackgroundTaskIdentifier.invalid
+            })
+        }
+
+        
+        func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+            
+            UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.sound]){(granted,error) in
+                if granted {
+                    print("授权成功")
+                }else{
+                    print("授权失败")
+                }
+                
+            }
+            
+            return true
+            
+        }
         
         lazy var persistentContainer : NSPersistentContainer = {
             let container = NSPersistentContainer(name: "rishiji")
@@ -80,4 +117,5 @@ func splitViewController(_ splitViewController: UISplitViewController, collapseS
     return false
 
 }
+ 
 
