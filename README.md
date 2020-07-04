@@ -8,7 +8,7 @@ To-dos:
 - [ ] 完善空便签功能
 - [ ] 提醒事项闹钟功能
 
-具体请访问[源码]<www.github.com/waiwh91/-rishiji>
+具体请访问[源码](www.github.com/waiwh91/-rishiji)
 
 有什么建议或者意见请加QQ：1932514482，邮箱 zcy12138@outlook.com
 谢谢！🙏
